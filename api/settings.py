@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mpesa',
+    'django_daraja'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +124,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# mpesa env data
+MPESA_ENVIRONMENT = config('MPESA_ENVIRONMENT')
+MPESA_CUSTOMER_KEY = config('MPESA_CUSTOMER_KEY')
+MPESA_CUSTOMER_SECRET = config('MPESA_CUSTOMER_SECRET')
+MPESA_SHORTCODE = config('MPESA_SHORTCODE')
+MPESA_EXPRESS_SHORTCODE = config('MPESA_EXPRESS_SHORTCODE')
+MPESA_SHORTCODE_TYPE = config('MPESA_SHORTCODE_TYPE')
+MPESA_PASSKEY = config('MPESA_PASSKEY')
+MPESA_INITIATOR_USERNAME = config('MPESA_INITIATOR_USERNAME')
+MPESA_INITIATOR_SECURITY_CREDENTIAL = config('MPESA_INITIATOR_SECURITY_CREDENTIAL')
