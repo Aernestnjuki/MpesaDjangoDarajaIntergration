@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mpesa',
-    'django_daraja'
+    'django_daraja',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -127,8 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # mpesa env data
 MPESA_ENVIRONMENT = config('MPESA_ENVIRONMENT')
-MPESA_CUSTOMER_KEY = config('MPESA_CUSTOMER_KEY')
-MPESA_CUSTOMER_SECRET = config('MPESA_CUSTOMER_SECRET')
+MPESA_CONSUMER_KEY  = config('MPESA_CONSUMER_KEY')
+MPESA_CONSUMER_SECRET  = config('MPESA_CONSUMER_SECRET')
 MPESA_SHORTCODE = config('MPESA_SHORTCODE')
 MPESA_EXPRESS_SHORTCODE = config('MPESA_EXPRESS_SHORTCODE')
 MPESA_SHORTCODE_TYPE = config('MPESA_SHORTCODE_TYPE')
